@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Wazzam</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+   <link rel="icon" href="/assets/svg/bolt-lightning-solid.svg" type="image/x-icon">
+   <!-- lins the css file for additional styling -->
+   <script async src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+   <script>
+      // creates a variable for path name and css path
+      let pathname = window.location.pathname;
+      let cssFilePath = null;
+      // this is for debugging purposes
+      console.log(`pathname = window.location.${pathname}`);
+      // changes css path based on url path
+      if (pathname == "/") {
+         cssFilePath = "/css/wazzamStart.css";
+      } else if (pathname == "/home") {
+         cssFilePath = "/css/timeLine.css";
+      } else if (pathname == "/login") {
+         cssFilePath = "/css/wazzamStart.css";
+      } else if (pathname == "/signup") {
+         cssFilePath = "/css/wazzamStart.css";
+      } else {
+         cssFilePath = "/css/timeLine.css";
+      }
+      // creates the link element
+      var linkElement = document.createElement('link');
+      // sets the link element attributes
+      linkElement.type = 'text/css';
+      linkElement.rel = 'stylesheet';
+      linkElement.href = cssFilePath;
+      // appends the link element to the head section
+      document.head.appendChild(linkElement);
+   </script>
+   <style>
+      body {
+         font-family: "Roboto", sans-serif;
+         background-color: #f5f5f5;
+         color: #333;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+         font-family: "Roboto", sans-serif;
+      }
+   </style>
+</head>
+
+<body>
+   {{{body}}}
+</body>
+
+</html>

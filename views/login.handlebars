@@ -1,0 +1,48 @@
+<!-- importing js file -->
+<script async src="/js/wazzamStart.js"></script>
+
+<style>
+	input[type=text],
+	input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+
+	button {
+		width: 100%;
+		color: white;
+		border: none;
+		margin: 8px 0;
+		cursor: pointer;
+		padding: 14px 20px;
+		border-radius: 10px;
+		background-color: #007BFF;
+	}
+
+	button:hover {
+		opacity: 0.8;
+	}
+</style>
+
+<section class="w3-container w3-center backdrop-03">
+	<img src="/assets/png/deadshot.png" alt="deadshot" data-speed="-5" class="deadshot">
+	<div class="col-md-6 container w3-padding w3-center w3-margin w3-card">
+		<h2>Login</h2>
+		<form action="/login" method="post" class="form login-form">
+			<div>
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+				<button type="submit">Login</button>
+				<label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				</label>
+			</div>
+		</form>
+	</div>
+</section>
